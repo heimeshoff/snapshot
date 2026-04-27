@@ -5,12 +5,24 @@ Newest entries on top.
 
 ---
 
+## 2026-04-27 15:35 -- Task completed: external-sync-001-veracrypt-and-robocopy - External Sync mechanics — VeraCrypt CLI + robocopy
+
+**Type:** Work / Task completion
+**Task:** external-sync-001-veracrypt-and-robocopy - External Sync mechanics — VeraCrypt CLI + robocopy
+**Summary:** Published ADR-0008 selecting `veracrypt.exe` CLI for mount/dismount and `robocopy /MIR` (with `/L` preview) as the v1 diff/copy engine; filed a content-hash deep-diff spike as a follow-up backlog item.
+**Commit:** TBD
+**Files changed:** 2
+**ADRs written:** 0008-external-sync-veracrypt-and-robocopy.md
+**New backlog items:** external-sync-002-content-hash-deep-diff-spike
+
+---
+
 ## 2026-04-27 15:30 -- Task completed: sources-001-linux-ssh-and-recipes - Linux integration — SSH transport and per-container backup recipes
 
 **Type:** Work / Task completion
 **Task:** sources-001-linux-ssh-and-recipes - Linux integration — SSH transport and per-container backup recipes
 **Summary:** Published ADR-0007 selecting SSH.NET as the Linux transport with key-file auth (path stored, key never read into DB) and per-container backup recipes as typed C# functions in the Sources BC.
-**Commit:** TBD
+**Commit:** 26ee91a
 **Files changed:** 1
 **ADRs written:** 0007-sources-linux-ssh-and-recipes.md
 

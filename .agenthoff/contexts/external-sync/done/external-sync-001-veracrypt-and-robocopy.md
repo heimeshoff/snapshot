@@ -2,11 +2,12 @@
 id: external-sync-001-veracrypt-and-robocopy
 title: External Sync mechanics — VeraCrypt CLI + robocopy
 type: decision
-status: todo
+status: done
 bc: external-sync
 scope: external-sync
 depends_on: [foundation-001-stack-and-form-factor]
 created: 2026-04-27
+completed: 2026-04-27
 ---
 
 # Decision: External Sync mechanics
@@ -27,11 +28,11 @@ created: 2026-04-27
 - **Always content-hash** — punishes a 50GB Notion archive on every sync.
 
 ## Acceptance criteria
-- [ ] ADR committed at `.agenthoff/knowledge/decisions/0008-external-sync-veracrypt-and-robocopy.md` with `scope: external-sync`.
-- [ ] ADR justification matches the draft below (or Marco's amended version).
-- [ ] Robocopy output parsing isolated in one module so a future engine swap touches one place. (Documented in ADR; no implementation required by this task.)
-- [ ] Follow-up research task captured for "content-hash deep-diff" — either filed as a separate `type: spike` in this BC's `backlog/`, or explicitly waived in the ADR.
-- [ ] No code change required by this task.
+- [x] ADR committed at `.agenthoff/knowledge/decisions/0008-external-sync-veracrypt-and-robocopy.md` with `scope: external-sync`.
+- [x] ADR justification matches the draft below (or Marco's amended version).
+- [x] Robocopy output parsing isolated in one module so a future engine swap touches one place. (Documented in ADR; no implementation required by this task.)
+- [x] Follow-up research task captured for "content-hash deep-diff" — filed as `external-sync-002-content-hash-deep-diff-spike` in this BC's `backlog/`.
+- [x] No code change required by this task.
 
 ## Notes (architect's ADR draft)
 
@@ -60,3 +61,8 @@ on Windows. Two mechanics need decisions: (1) how Snapshot drives VeraCrypt,
 - Robocopy output parsing is brittle; isolate it in one module so a future
   engine swap touches one place.
 ```
+
+## Outcome
+- ADR written: `.agenthoff/knowledge/decisions/0008-external-sync-veracrypt-and-robocopy.md`.
+- Follow-up spike filed: `external-sync-002-content-hash-deep-diff-spike` in `backlog/`.
+- BC README already references this decision and the deferred deep-diff spike (no README change needed).
