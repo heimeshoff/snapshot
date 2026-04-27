@@ -1,0 +1,110 @@
+<UserControl x:Class="Snapshot.Views.SettingsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="32,28,32,28" MaxWidth="900">
+
+            <TextBlock Text="Settings"
+                       FontSize="28" FontWeight="SemiBold"
+                       Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+            <TextBlock Text="Per-machine preferences."
+                       FontSize="13"
+                       Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                       Margin="0,4,0,24" />
+
+            <!-- Database path -->
+            <TextBlock Text="DATABASE"
+                       FontSize="11" FontWeight="Bold"
+                       Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                       Margin="0,0,0,10" />
+
+            <Border Background="{DynamicResource CardBackgroundFillColorSecondaryBrush}"
+                    CornerRadius="10" Padding="20,16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="Operational database path"
+                               FontSize="13" FontWeight="SemiBold"
+                               Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+                               Margin="0,0,0,6" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="DatabasePathBox"
+                                 Grid.Column="0"
+                                 IsReadOnly="True"
+                                 Margin="0,0,8,0" />
+                        <ui:Button Grid.Column="1" Content="Browse..." IsEnabled="False" />
+                    </Grid>
+                    <TextBlock Margin="0,8,0,0"
+                               FontSize="11"
+                               TextWrapping="Wrap"
+                               Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                               Text="Avoid placing the database inside a Google Drive (or other cloud-sync) folder — sync clients can corrupt live SQLite files. Editing the path here lands in a follow-up task." />
+                </StackPanel>
+            </Border>
+
+            <!-- Drive folder -->
+            <TextBlock Text="DRIVE FOLDER"
+                       FontSize="11" FontWeight="Bold"
+                       Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                       Margin="0,16,0,10" />
+
+            <Border Background="{DynamicResource CardBackgroundFillColorSecondaryBrush}"
+                    CornerRadius="10" Padding="20,16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="Where backup artifacts land"
+                               FontSize="13" FontWeight="SemiBold"
+                               Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+                               Margin="0,0,0,6" />
+                    <TextBox x:Name="DriveFolderPathBox" IsReadOnly="True" />
+                </StackPanel>
+            </Border>
+
+            <!-- Theme -->
+            <TextBlock Text="APPEARANCE"
+                       FontSize="11" FontWeight="Bold"
+                       Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                       Margin="0,16,0,10" />
+
+            <Border Background="{DynamicResource CardBackgroundFillColorSecondaryBrush}"
+                    CornerRadius="10" Padding="20,16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="Theme"
+                               FontSize="13" FontWeight="SemiBold"
+                               Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+                               Margin="0,0,0,6" />
+                    <ComboBox x:Name="ThemeBox" IsEnabled="False">
+                        <ComboBoxItem Content="System" />
+                        <ComboBoxItem Content="Light" />
+                        <ComboBoxItem Content="Dark" />
+                    </ComboBox>
+                    <TextBlock Margin="0,8,0,0"
+                               FontSize="11"
+                               TextWrapping="Wrap"
+                               Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                               Text="Theme picker lands with the design-system styleguide." />
+                </StackPanel>
+            </Border>
+
+            <!-- Settings file location -->
+            <TextBlock Text="DIAGNOSTICS"
+                       FontSize="11" FontWeight="Bold"
+                       Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                       Margin="0,16,0,10" />
+
+            <Border Background="{DynamicResource CardBackgroundFillColorSecondaryBrush}"
+                    CornerRadius="10" Padding="20,16">
+                <StackPanel>
+                    <TextBlock Text="Settings file"
+                               FontSize="13" FontWeight="SemiBold"
+                               Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+                               Margin="0,0,0,6" />
+                    <TextBox x:Name="SettingsFilePathBox" IsReadOnly="True" />
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

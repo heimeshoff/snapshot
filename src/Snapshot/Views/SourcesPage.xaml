@@ -1,0 +1,75 @@
+<UserControl x:Class="Snapshot.Views.SourcesPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml">
+    <Grid Margin="32,28,32,28">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Sources"
+                       FontSize="28" FontWeight="SemiBold"
+                       Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+            <TextBlock Text="Registered Sources and their freshness."
+                       FontSize="13"
+                       Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                       Margin="0,4,0,0" />
+        </StackPanel>
+
+        <ItemsControl x:Name="SourceList" Grid.Row="1">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="{DynamicResource CardBackgroundFillColorSecondaryBrush}"
+                            CornerRadius="10"
+                            Padding="20,16"
+                            Margin="0,0,0,12">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                                <TextBlock Text="{Binding Name}"
+                                           FontSize="16" FontWeight="SemiBold"
+                                           Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                                <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                                    <TextBlock Text="{Binding KindLabel}"
+                                               FontSize="12"
+                                               Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                                    <TextBlock Text=" • "
+                                               FontSize="12"
+                                               Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                                    <TextBlock Text="{Binding LastBackupLabel}"
+                                               FontSize="12"
+                                               Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                                </StackPanel>
+                            </StackPanel>
+
+                            <Border Grid.Column="1"
+                                    CornerRadius="999"
+                                    Padding="12,4"
+                                    Margin="0,0,12,0"
+                                    VerticalAlignment="Center"
+                                    Background="{Binding StateBackgroundBrush}">
+                                <TextBlock Text="{Binding StateLabel}"
+                                           FontSize="11" FontWeight="SemiBold"
+                                           Foreground="{Binding StateForegroundBrush}" />
+                            </Border>
+
+                            <ui:Button Grid.Column="2"
+                                       Content="Back up now"
+                                       Appearance="Primary"
+                                       Click="BackUpNow_Click"
+                                       Tag="{Binding SourceId}"
+                                       IsEnabled="{Binding CanBackUp}" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</UserControl>

@@ -5,12 +5,31 @@ Newest entries on top.
 
 ---
 
+## 2026-04-27 17:30 -- Task completed: foundation-005-walking-skeleton - Walking skeleton — end-to-end thin slice
+
+**Type:** Work / Task completion
+**Task:** foundation-005-walking-skeleton - Walking skeleton — end-to-end thin slice
+**Summary:** Snapshot WPF .NET 9 walking skeleton compiles clean and 12/12 tests green. Sources page renders the seeded fake driven Source with Stale/Fresh + Back-up-now wiring; Archives/Sync are stubs; Settings shows the database path. settings.json (v1 schema) and SQLite (sources/backup_runs/sync_runs) initialize on first run; corrupt-settings quarantine and window-geometry round-trip are integration-tested. The four purely-visual criteria (Mica rendering, badge animation timing, restored position pixel-equal, page selection styling) were not human-eyeballed in this session and want a hands-on launch for sign-off.
+**Commit:** TBD
+**Files changed:** ~33 (full WPF solution + tests + .gitignore)
+**ADRs written:** none
+
+---
+
+## 2026-04-27 16:15 -- Batch started: [foundation-005-walking-skeleton]
+
+**Type:** Work / Batch start
+**Tasks:** foundation-005-walking-skeleton - Walking skeleton — end-to-end thin slice
+**Parallel:** no (1 worker — spike that bootstraps the entire WPF solution)
+
+---
+
 ## 2026-04-27 16:10 -- Task completed: foundation-004-cross-cutting-concerns - Cross-cutting — secrets, logging, partial-failure semantics
 
 **Type:** Work / Task completion
 **Task:** foundation-004-cross-cutting-concerns - Cross-cutting — secrets, logging, partial-failure semantics
 **Summary:** Published ADR-0006 capturing per-session in-memory VeraCrypt secrets, two-channel logging (Serilog app log plus SQLite domain log), and per-Source partial-failure isolation with `.partial` debris naming.
-**Commit:** TBD
+**Commit:** e46b143
 **Files changed:** 1
 **ADRs written:** 0006-cross-cutting-concerns.md
 

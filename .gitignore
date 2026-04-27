@@ -10,3 +10,15 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+### .NET / Visual Studio build artifacts
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+.vs/
+publish/
+artifacts/
+*.pdb
