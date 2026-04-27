@@ -2,11 +2,12 @@
 id: foundation-002-persistence-sqlite
 title: Persistence and local settings layout
 type: decision
-status: todo
+status: done
 bc: foundation
 scope: global
 depends_on: [foundation-001-stack-and-form-factor]
 created: 2026-04-27
+completed: 2026-04-27
 ---
 
 # Decision: Persistence and local settings layout
@@ -37,10 +38,10 @@ First-run is silent: defaults are written, the DB folder is created, schema is i
 - **EF Core** — overshoot for this size; migration ceremony Marco doesn't need.
 
 ## Acceptance criteria
-- [ ] ADR committed at `.agenthoff/knowledge/decisions/0004-persistence-and-local-settings-layout.md` with `scope: global`.
-- [ ] ADR justification matches the draft below (or Marco's amended version).
-- [ ] ADR explicitly documents: default DB path, `settings.json` location and v1 schema, missing/corrupt-settings handling, first-run flow, and the Drive-folder corruption footgun.
-- [ ] No code change required by this task — implementation lands with `foundation-005`.
+- [x] ADR committed at `.agenthoff/knowledge/decisions/0004-persistence-and-local-settings-layout.md` with `scope: global`.
+- [x] ADR justification matches the draft below (or Marco's amended version).
+- [x] ADR explicitly documents: default DB path, `settings.json` location and v1 schema, missing/corrupt-settings handling, first-run flow, and the Drive-folder corruption footgun.
+- [x] No code change required by this task — implementation lands with `foundation-005`.
 
 ## Notes (architect's ADR draft)
 
@@ -135,3 +136,6 @@ detection (walking parents for known Drive markers) is a v2 nice-to-have.
   `logs\` subdirectory (per ADR-0006). Clean layout, no overlap with the
   operational DB.
 ```
+
+## Outcome
+ADR-0004 published at `.agenthoff/knowledge/decisions/0004-persistence-and-local-settings-layout.md`. Documents the two-storage-locations decision: SQLite (`Microsoft.Data.Sqlite`, hand-rolled queries) at a user-relocatable default of `%USERPROFILE%\Documents\Snapshot\snapshot.db` for operational data, and a per-machine `%LOCALAPPDATA%\Snapshot\settings.json` (v1 schema spelled out) for runtime preferences. Includes silent first-run flow, missing/corrupt settings handling, `ISettingsService` access pattern, and the Google-Drive-folder corruption footgun warning. No code change in this task; implementation lands in `foundation-005-walking-skeleton`.

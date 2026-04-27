@@ -5,6 +5,36 @@ Newest entries on top.
 
 ---
 
+## 2026-04-27 15:25 -- Task completed: foundation-002-persistence-sqlite - Persistence and local settings layout
+
+**Type:** Work / Task completion
+**Task:** foundation-002-persistence-sqlite - Persistence and local settings layout
+**Summary:** Published ADR-0004 documenting the two-storage-location layout — SQLite via Microsoft.Data.Sqlite at a user-relocatable default path, settings.json under %LOCALAPPDATA% for per-machine preferences, with silent first-run flow and Google-Drive corruption footgun called out.
+**Commit:** TBD
+**Files changed:** 1
+**ADRs written:** 0004-persistence-and-local-settings-layout.md
+
+---
+
+## 2026-04-27 15:10 -- Batch started: [foundation-002-persistence-sqlite, sources-001-linux-ssh-and-recipes, external-sync-001-veracrypt-and-robocopy]
+
+**Type:** Work / Batch start
+**Tasks:** foundation-002-persistence-sqlite - Persistence and local settings layout; sources-001-linux-ssh-and-recipes - Linux integration — SSH transport and per-container backup recipes; external-sync-001-veracrypt-and-robocopy - External Sync mechanics — VeraCrypt CLI + robocopy
+**Parallel:** yes (3 workers)
+
+---
+
+## 2026-04-27 15:05 -- Task completed: foundation-001-stack-and-form-factor - Stack, language, framework, form factor
+
+**Type:** Work / Task completion
+**Task:** foundation-001-stack-and-form-factor - Stack, language, framework, form factor
+**Summary:** Recorded the stack-and-form-factor decision as ADR 0003 (global scope): C# .NET 9 WPF + WPF-UI summoned foreground app mirroring WhisperHeim, no tray, no auto-start.
+**Commit:** a40f394
+**Files changed:** 1
+**ADRs written:** 0003-stack-and-form-factor.md
+
+---
+
 ## 2026-04-27 15:00 -- Batch started: [foundation-001-stack-and-form-factor]
 
 **Type:** Work / Batch start
