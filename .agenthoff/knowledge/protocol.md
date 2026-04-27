@@ -5,12 +5,32 @@ Newest entries on top.
 
 ---
 
+## 2026-04-27 15:50 -- Task completed: foundation-003-no-inter-context-bus - Inter-context transport — shared substrate, no bus
+
+**Type:** Work / Task completion
+**Task:** foundation-003-no-inter-context-bus - Inter-context transport — shared substrate, no bus
+**Summary:** Published ADR-0005 establishing that the three BCs share only the Drive folder and the SQLite database — no message bus, no in-process event dispatch, no HTTP between contexts.
+**Commit:** TBD
+**Files changed:** 1
+**ADRs written:** 0005-no-inter-context-bus.md
+
+---
+
+## 2026-04-27 15:40 -- Batch started: [foundation-003-no-inter-context-bus, archive-exploration-001-archive-viewers]
+
+**Type:** Work / Batch start
+**Tasks:** foundation-003-no-inter-context-bus - Inter-context transport — shared substrate, no bus; archive-exploration-001-archive-viewers - Archive viewers — Notion zip rendering and Gmail mbox browser
+**Parallel:** yes (2 workers)
+**Note:** foundation-004 demoted to next batch — both 003 and 004 target the foundation BC README, protocol forbids parallel BC-README updates.
+
+---
+
 ## 2026-04-27 15:35 -- Task completed: external-sync-001-veracrypt-and-robocopy - External Sync mechanics — VeraCrypt CLI + robocopy
 
 **Type:** Work / Task completion
 **Task:** external-sync-001-veracrypt-and-robocopy - External Sync mechanics — VeraCrypt CLI + robocopy
 **Summary:** Published ADR-0008 selecting `veracrypt.exe` CLI for mount/dismount and `robocopy /MIR` (with `/L` preview) as the v1 diff/copy engine; filed a content-hash deep-diff spike as a follow-up backlog item.
-**Commit:** TBD
+**Commit:** cc0abf5
 **Files changed:** 2
 **ADRs written:** 0008-external-sync-veracrypt-and-robocopy.md
 **New backlog items:** external-sync-002-content-hash-deep-diff-spike
