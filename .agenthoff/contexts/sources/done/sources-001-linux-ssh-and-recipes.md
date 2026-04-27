@@ -2,11 +2,12 @@
 id: sources-001-linux-ssh-and-recipes
 title: Linux integration — SSH transport and per-container backup recipes
 type: decision
-status: todo
+status: done
 bc: sources
 scope: sources
 depends_on: [foundation-001-stack-and-form-factor]
 created: 2026-04-27
+completed: 2026-04-27
 ---
 
 # Decision: Linux integration mechanism
@@ -24,9 +25,9 @@ created: 2026-04-27
 - **Recipes as YAML/JSON config** — premature DSL; C# functions are a better config language for one developer.
 
 ## Acceptance criteria
-- [ ] ADR committed at `.agenthoff/knowledge/decisions/0007-sources-linux-ssh-and-recipes.md` with `scope: sources`.
-- [ ] ADR justification matches the draft below (or Marco's amended version).
-- [ ] No code change required by this task.
+- [x] ADR committed at `.agenthoff/knowledge/decisions/0007-sources-linux-ssh-and-recipes.md` with `scope: sources`.
+- [x] ADR justification matches the draft below (or Marco's amended version).
+- [x] No code change required by this task.
 
 ## Notes (architect's ADR draft)
 
@@ -54,3 +55,10 @@ into the Drive folder, and surface partial-failure results.
 - Partial failures are first-class: each Source's run produces a result
   independently; the dashboard aggregates them.
 ```
+
+## Outcome
+ADR 0007 written at `.agenthoff/knowledge/decisions/0007-sources-linux-ssh-and-recipes.md`
+(scope: sources). Captures SSH.NET as Linux transport, SSH key auth via
+on-disk key path (not stored in DB), and per-container backup recipes as
+typed C# functions returning `Result<BackupArtifact, BackupError>`. No code
+changes; this is a pure decision task.

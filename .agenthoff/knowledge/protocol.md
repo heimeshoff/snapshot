@@ -5,12 +5,23 @@ Newest entries on top.
 
 ---
 
+## 2026-04-27 15:30 -- Task completed: sources-001-linux-ssh-and-recipes - Linux integration — SSH transport and per-container backup recipes
+
+**Type:** Work / Task completion
+**Task:** sources-001-linux-ssh-and-recipes - Linux integration — SSH transport and per-container backup recipes
+**Summary:** Published ADR-0007 selecting SSH.NET as the Linux transport with key-file auth (path stored, key never read into DB) and per-container backup recipes as typed C# functions in the Sources BC.
+**Commit:** TBD
+**Files changed:** 1
+**ADRs written:** 0007-sources-linux-ssh-and-recipes.md
+
+---
+
 ## 2026-04-27 15:25 -- Task completed: foundation-002-persistence-sqlite - Persistence and local settings layout
 
 **Type:** Work / Task completion
 **Task:** foundation-002-persistence-sqlite - Persistence and local settings layout
 **Summary:** Published ADR-0004 documenting the two-storage-location layout — SQLite via Microsoft.Data.Sqlite at a user-relocatable default path, settings.json under %LOCALAPPDATA% for per-machine preferences, with silent first-run flow and Google-Drive corruption footgun called out.
-**Commit:** TBD
+**Commit:** f54c103
 **Files changed:** 1
 **ADRs written:** 0004-persistence-and-local-settings-layout.md
 
