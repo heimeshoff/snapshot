@@ -5,12 +5,31 @@ Newest entries on top.
 
 ---
 
+## 2026-04-27 16:10 -- Task completed: foundation-004-cross-cutting-concerns - Cross-cutting — secrets, logging, partial-failure semantics
+
+**Type:** Work / Task completion
+**Task:** foundation-004-cross-cutting-concerns - Cross-cutting — secrets, logging, partial-failure semantics
+**Summary:** Published ADR-0006 capturing per-session in-memory VeraCrypt secrets, two-channel logging (Serilog app log plus SQLite domain log), and per-Source partial-failure isolation with `.partial` debris naming.
+**Commit:** TBD
+**Files changed:** 1
+**ADRs written:** 0006-cross-cutting-concerns.md
+
+---
+
+## 2026-04-27 16:00 -- Batch started: [foundation-004-cross-cutting-concerns]
+
+**Type:** Work / Batch start
+**Tasks:** foundation-004-cross-cutting-concerns - Cross-cutting — secrets, logging, partial-failure semantics
+**Parallel:** no (1 worker — foundation-005 still blocked on 004; design-system blocked on 005)
+
+---
+
 ## 2026-04-27 15:55 -- Task completed: archive-exploration-001-archive-viewers - Archive viewers — Notion zip rendering and Gmail mbox browser
 
 **Type:** Work / Task completion
 **Task:** archive-exploration-001-archive-viewers - Archive viewers — Notion zip rendering and Gmail mbox browser
 **Summary:** Published ADR-0009 selecting WebView2 (JS disabled, navigation locked, external requests blocked) for Notion zip rendering, and MimeKit + per-archive SQLite FTS5 sidecar with WPF master-detail UI for Gmail mbox browsing.
-**Commit:** TBD
+**Commit:** 1315dea
 **Files changed:** 1
 **ADRs written:** 0009-archive-viewers.md
 

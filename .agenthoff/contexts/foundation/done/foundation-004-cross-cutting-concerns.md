@@ -2,11 +2,12 @@
 id: foundation-004-cross-cutting-concerns
 title: Cross-cutting — secrets, logging, partial-failure semantics
 type: decision
-status: todo
+status: done
 bc: foundation
 scope: global
 depends_on: [foundation-002-persistence-sqlite]
 created: 2026-04-27
+completed: 2026-04-27
 ---
 
 # Decision: Cross-cutting concerns
@@ -27,9 +28,9 @@ created: 2026-04-27
 - **VeraCrypt password in Windows Credential Manager** — convenient but contradicts the vision's "password is never stored."
 
 ## Acceptance criteria
-- [ ] ADR committed at `.agenthoff/knowledge/decisions/0006-cross-cutting-concerns.md` with `scope: global`.
-- [ ] ADR justification matches the draft below (or Marco's amended version).
-- [ ] No code change required by this task.
+- [x] ADR committed at `.agenthoff/knowledge/decisions/0006-cross-cutting-concerns.md` with `scope: global`.
+- [x] ADR justification matches the draft below (or Marco's amended version).
+- [x] No code change required by this task.
 
 ## Notes (architect's ADR draft)
 
@@ -71,3 +72,6 @@ the dashboard exposes a per-Source "retry" action.
 - Partial-failure semantics keep the Drive folder always-valid: the latest
   *complete* copy is always present, and partial debris is clearly named.
 ```
+
+## Outcome
+ADR-0006 written at `.agenthoff/knowledge/decisions/0006-cross-cutting-concerns.md` capturing the three cross-cutting decisions: per-session in-memory VeraCrypt password handling, two-channel logging (Serilog app log + SQLite domain log), and per-Source partial-failure isolation with `.partial` debris naming. No code changes; pure decision task.
