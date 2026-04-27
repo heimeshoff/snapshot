@@ -2,11 +2,13 @@
 id: foundation-001-stack-and-form-factor
 title: Stack, language, framework, form factor
 type: decision
-status: todo
+status: done
 bc: foundation
 scope: global
 depends_on: []
 created: 2026-04-27
+completed: 2026-04-27
+commit: 390584a
 ---
 
 # Decision: Stack / language / framework / form factor
@@ -30,9 +32,9 @@ created: 2026-04-27
 - **Tray-resident background app (mirroring WhisperHeim's tray-and-hotkey model)** — explicitly rejected. Snapshot is a weekly-summoned foreground tool, not an always-on hotkey-triggered service.
 
 ## Acceptance criteria
-- [ ] ADR committed at `.agenthoff/knowledge/decisions/0003-stack-and-form-factor.md` with `scope: global`.
-- [ ] ADR justification matches the draft below (or Marco's amended version).
-- [ ] No code change required by this task.
+- [x] ADR committed at `.agenthoff/knowledge/decisions/0003-stack-and-form-factor.md` with `scope: global`.
+- [x] ADR justification matches the draft below (or Marco's amended version).
+- [x] No code change required by this task.
 
 ## Notes (architect's ADR draft, corrected)
 
@@ -78,3 +80,6 @@ dependency.
 - Closing the main window terminates the process cleanly. No background
   presence, no tray icon, no auto-launch at login.
 ```
+
+## Outcome
+ADR 0003 written at `.agenthoff/knowledge/decisions/0003-stack-and-form-factor.md`. Stack is fixed: C# .NET 9 + WPF + WPF-UI, single-window summoned foreground app, no tray, no auto-start. Mirrors WhisperHeim project layout. No code changed by this task — downstream tasks (notably `foundation-005-walking-skeleton`) will scaffold the actual project.

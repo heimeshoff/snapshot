@@ -5,6 +5,14 @@ Newest entries on top.
 
 ---
 
+## 2026-04-27 15:00 -- Batch started: [foundation-001-stack-and-form-factor]
+
+**Type:** Work / Batch start
+**Tasks:** foundation-001-stack-and-form-factor - Stack, language, framework, form factor
+**Parallel:** no (1 worker)
+
+---
+
 ## 2026-04-27 14:30 -- Model / Refined: foundation-002 - Persistence and local settings layout
 
 **Type:** Model / Refine
