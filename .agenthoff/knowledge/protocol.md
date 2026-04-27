@@ -5,12 +5,23 @@ Newest entries on top.
 
 ---
 
+## 2026-04-27 15:55 -- Task completed: archive-exploration-001-archive-viewers - Archive viewers — Notion zip rendering and Gmail mbox browser
+
+**Type:** Work / Task completion
+**Task:** archive-exploration-001-archive-viewers - Archive viewers — Notion zip rendering and Gmail mbox browser
+**Summary:** Published ADR-0009 selecting WebView2 (JS disabled, navigation locked, external requests blocked) for Notion zip rendering, and MimeKit + per-archive SQLite FTS5 sidecar with WPF master-detail UI for Gmail mbox browsing.
+**Commit:** TBD
+**Files changed:** 1
+**ADRs written:** 0009-archive-viewers.md
+
+---
+
 ## 2026-04-27 15:50 -- Task completed: foundation-003-no-inter-context-bus - Inter-context transport — shared substrate, no bus
 
 **Type:** Work / Task completion
 **Task:** foundation-003-no-inter-context-bus - Inter-context transport — shared substrate, no bus
 **Summary:** Published ADR-0005 establishing that the three BCs share only the Drive folder and the SQLite database — no message bus, no in-process event dispatch, no HTTP between contexts.
-**Commit:** TBD
+**Commit:** ac61130
 **Files changed:** 1
 **ADRs written:** 0005-no-inter-context-bus.md
 

@@ -2,11 +2,12 @@
 id: archive-exploration-001-archive-viewers
 title: Archive viewers — Notion zip rendering and Gmail mbox browser
 type: decision
-status: todo
+status: done
 bc: archive-exploration
 scope: archive-exploration
 depends_on: [foundation-001-stack-and-form-factor, foundation-002-persistence-sqlite]
 created: 2026-04-27
+completed: 2026-04-27
 ---
 
 # Decision: Archive viewer rendering strategy
@@ -29,9 +30,12 @@ created: 2026-04-27
 - **Render HTML emails as text only** — loses fidelity for the trust-verification use case (Marco wants to *see* what's there).
 
 ## Acceptance criteria
-- [ ] ADR committed at `.agenthoff/knowledge/decisions/0009-archive-viewers.md` with `scope: archive-exploration`.
-- [ ] ADR justification matches the draft below (or Marco's amended version).
-- [ ] No code change required by this task.
+- [x] ADR committed at `.agenthoff/knowledge/decisions/0009-archive-viewers.md` with `scope: archive-exploration`.
+- [x] ADR justification matches the draft below (or Marco's amended version).
+- [x] No code change required by this task.
+
+## Outcome
+ADR-0009 written at `.agenthoff/knowledge/decisions/0009-archive-viewers.md` capturing the decision: WebView2 (JS disabled, navigation locked, external requests blocked) for Notion zip rendering; MimeKit + per-archive SQLite FTS5 sidecar with WPF master-detail UI for Gmail mbox browsing. No code changes — pure decision task. The BC README already cited this ADR (line 27); content is consistent, no README update needed.
 
 ## Notes (architect's ADR draft, corrected)
 
