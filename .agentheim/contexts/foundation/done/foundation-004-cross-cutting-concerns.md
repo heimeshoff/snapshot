@@ -28,7 +28,7 @@ completed: 2026-04-27
 - **VeraCrypt password in Windows Credential Manager** — convenient but contradicts the vision's "password is never stored."
 
 ## Acceptance criteria
-- [x] ADR committed at `.agenthoff/knowledge/decisions/0006-cross-cutting-concerns.md` with `scope: global`.
+- [x] ADR committed at `.agentheim/knowledge/decisions/0006-cross-cutting-concerns.md` with `scope: global`.
 - [x] ADR justification matches the draft below (or Marco's amended version).
 - [x] No code change required by this task.
 
@@ -74,4 +74,4 @@ the dashboard exposes a per-Source "retry" action.
 ```
 
 ## Outcome
-ADR-0006 written at `.agenthoff/knowledge/decisions/0006-cross-cutting-concerns.md` capturing the three cross-cutting decisions: per-session in-memory VeraCrypt password handling, two-channel logging (Serilog app log + SQLite domain log), and per-Source partial-failure isolation with `.partial` debris naming. No code changes; pure decision task.
+ADR-0006 written at `.agentheim/knowledge/decisions/0006-cross-cutting-concerns.md` capturing the three cross-cutting decisions: per-session in-memory VeraCrypt password handling, two-channel logging (Serilog app log + SQLite domain log), and per-Source partial-failure isolation with `.partial` debris naming. No code changes; pure decision task.

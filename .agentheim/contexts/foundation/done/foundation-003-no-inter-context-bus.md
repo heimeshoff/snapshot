@@ -25,12 +25,12 @@ completed: 2026-04-27
 - **Separate processes per BC** — adds IPC for no isolation gain.
 
 ## Acceptance criteria
-- [x] ADR committed at `.agenthoff/knowledge/decisions/0005-no-inter-context-bus.md` with `scope: global`.
+- [x] ADR committed at `.agentheim/knowledge/decisions/0005-no-inter-context-bus.md` with `scope: global`.
 - [x] ADR justification matches the draft below (or Marco's amended version).
 - [x] No code change required by this task.
 
 ## Outcome
-ADR 0005 written at `.agenthoff/knowledge/decisions/0005-no-inter-context-bus.md` (`scope: global`), reproducing the architect's draft verbatim. Establishes that the three BCs share only the Drive folder and the SQLite database — Sources owns writes; External Sync and Archive Exploration are read-only consumers. No code changes; foundation README untouched (the substrate principle is captured in the global ADR rather than in the BC README, matching the pattern of ADRs 0001/0002).
+ADR 0005 written at `.agentheim/knowledge/decisions/0005-no-inter-context-bus.md` (`scope: global`), reproducing the architect's draft verbatim. Establishes that the three BCs share only the Drive folder and the SQLite database — Sources owns writes; External Sync and Archive Exploration are read-only consumers. No code changes; foundation README untouched (the substrate principle is captured in the global ADR rather than in the BC README, matching the pattern of ADRs 0001/0002).
 
 ## Notes (architect's ADR draft)
 

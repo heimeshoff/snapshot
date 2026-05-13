@@ -28,7 +28,7 @@ completed: 2026-04-27
 - **Always content-hash** — punishes a 50GB Notion archive on every sync.
 
 ## Acceptance criteria
-- [x] ADR committed at `.agenthoff/knowledge/decisions/0008-external-sync-veracrypt-and-robocopy.md` with `scope: external-sync`.
+- [x] ADR committed at `.agentheim/knowledge/decisions/0008-external-sync-veracrypt-and-robocopy.md` with `scope: external-sync`.
 - [x] ADR justification matches the draft below (or Marco's amended version).
 - [x] Robocopy output parsing isolated in one module so a future engine swap touches one place. (Documented in ADR; no implementation required by this task.)
 - [x] Follow-up research task captured for "content-hash deep-diff" — filed as `external-sync-002-content-hash-deep-diff-spike` in this BC's `backlog/`.
@@ -63,6 +63,6 @@ on Windows. Two mechanics need decisions: (1) how Snapshot drives VeraCrypt,
 ```
 
 ## Outcome
-- ADR written: `.agenthoff/knowledge/decisions/0008-external-sync-veracrypt-and-robocopy.md`.
+- ADR written: `.agentheim/knowledge/decisions/0008-external-sync-veracrypt-and-robocopy.md`.
 - Follow-up spike filed: `external-sync-002-content-hash-deep-diff-spike` in `backlog/`.
 - BC README already references this decision and the deferred deep-diff spike (no README change needed).

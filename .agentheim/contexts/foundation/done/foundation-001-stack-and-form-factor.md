@@ -32,7 +32,7 @@ commit: 390584a
 - **Tray-resident background app (mirroring WhisperHeim's tray-and-hotkey model)** — explicitly rejected. Snapshot is a weekly-summoned foreground tool, not an always-on hotkey-triggered service.
 
 ## Acceptance criteria
-- [x] ADR committed at `.agenthoff/knowledge/decisions/0003-stack-and-form-factor.md` with `scope: global`.
+- [x] ADR committed at `.agentheim/knowledge/decisions/0003-stack-and-form-factor.md` with `scope: global`.
 - [x] ADR justification matches the draft below (or Marco's amended version).
 - [x] No code change required by this task.
 
@@ -82,4 +82,4 @@ dependency.
 ```
 
 ## Outcome
-ADR 0003 written at `.agenthoff/knowledge/decisions/0003-stack-and-form-factor.md`. Stack is fixed: C# .NET 9 + WPF + WPF-UI, single-window summoned foreground app, no tray, no auto-start. Mirrors WhisperHeim project layout. No code changed by this task — downstream tasks (notably `foundation-005-walking-skeleton`) will scaffold the actual project.
+ADR 0003 written at `.agentheim/knowledge/decisions/0003-stack-and-form-factor.md`. Stack is fixed: C# .NET 9 + WPF + WPF-UI, single-window summoned foreground app, no tray, no auto-start. Mirrors WhisperHeim project layout. No code changed by this task — downstream tasks (notably `foundation-005-walking-skeleton`) will scaffold the actual project.

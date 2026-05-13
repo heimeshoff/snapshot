@@ -7,6 +7,6 @@ Cross-cutting tech-architecture concerns that don't belong to any single bounded
 Cross-cutting (not a domain BC — a place for architecture decisions whose ADRs are scoped `global`).
 
 ## Notes
-- Decision tasks here produce ADRs in `.agenthoff/knowledge/decisions/` with `scope: global`.
+- Decision tasks here produce ADRs in `.agentheim/knowledge/decisions/` with `scope: global`.
 - The walking-skeleton spike is the project's first working code. Every domain BC depends (transitively) on it.
 - This directory exists *because* of the brainstorm architecture-foundation pass; future cross-cutting refinements land here too.

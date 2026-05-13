@@ -38,7 +38,7 @@ First-run is silent: defaults are written, the DB folder is created, schema is i
 - **EF Core** — overshoot for this size; migration ceremony Marco doesn't need.
 
 ## Acceptance criteria
-- [x] ADR committed at `.agenthoff/knowledge/decisions/0004-persistence-and-local-settings-layout.md` with `scope: global`.
+- [x] ADR committed at `.agentheim/knowledge/decisions/0004-persistence-and-local-settings-layout.md` with `scope: global`.
 - [x] ADR justification matches the draft below (or Marco's amended version).
 - [x] ADR explicitly documents: default DB path, `settings.json` location and v1 schema, missing/corrupt-settings handling, first-run flow, and the Drive-folder corruption footgun.
 - [x] No code change required by this task — implementation lands with `foundation-005`.
@@ -138,4 +138,4 @@ detection (walking parents for known Drive markers) is a v2 nice-to-have.
 ```
 
 ## Outcome
-ADR-0004 published at `.agenthoff/knowledge/decisions/0004-persistence-and-local-settings-layout.md`. Documents the two-storage-locations decision: SQLite (`Microsoft.Data.Sqlite`, hand-rolled queries) at a user-relocatable default of `%USERPROFILE%\Documents\Snapshot\snapshot.db` for operational data, and a per-machine `%LOCALAPPDATA%\Snapshot\settings.json` (v1 schema spelled out) for runtime preferences. Includes silent first-run flow, missing/corrupt settings handling, `ISettingsService` access pattern, and the Google-Drive-folder corruption footgun warning. No code change in this task; implementation lands in `foundation-005-walking-skeleton`.
+ADR-0004 published at `.agentheim/knowledge/decisions/0004-persistence-and-local-settings-layout.md`. Documents the two-storage-locations decision: SQLite (`Microsoft.Data.Sqlite`, hand-rolled queries) at a user-relocatable default of `%USERPROFILE%\Documents\Snapshot\snapshot.db` for operational data, and a per-machine `%LOCALAPPDATA%\Snapshot\settings.json` (v1 schema spelled out) for runtime preferences. Includes silent first-run flow, missing/corrupt settings handling, `ISettingsService` access pattern, and the Google-Drive-folder corruption footgun warning. No code change in this task; implementation lands in `foundation-005-walking-skeleton`.

@@ -25,7 +25,7 @@ completed: 2026-04-27
 - **Recipes as YAML/JSON config** — premature DSL; C# functions are a better config language for one developer.
 
 ## Acceptance criteria
-- [x] ADR committed at `.agenthoff/knowledge/decisions/0007-sources-linux-ssh-and-recipes.md` with `scope: sources`.
+- [x] ADR committed at `.agentheim/knowledge/decisions/0007-sources-linux-ssh-and-recipes.md` with `scope: sources`.
 - [x] ADR justification matches the draft below (or Marco's amended version).
 - [x] No code change required by this task.
 
@@ -57,7 +57,7 @@ into the Drive folder, and surface partial-failure results.
 ```
 
 ## Outcome
-ADR 0007 written at `.agenthoff/knowledge/decisions/0007-sources-linux-ssh-and-recipes.md`
+ADR 0007 written at `.agentheim/knowledge/decisions/0007-sources-linux-ssh-and-recipes.md`
 (scope: sources). Captures SSH.NET as Linux transport, SSH key auth via
 on-disk key path (not stored in DB), and per-container backup recipes as
 typed C# functions returning `Result<BackupArtifact, BackupError>`. No code

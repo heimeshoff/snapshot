@@ -35,7 +35,7 @@ A time-boxed research task (~half day) producing:
 ## Acceptance criteria
 - [ ] Measurements recorded against a real or representative dataset
       (size, file count, runtime).
-- [ ] Writeup committed under `.agenthoff/knowledge/research/` summarising
+- [ ] Writeup committed under `.agentheim/knowledge/research/` summarising
       findings and recommendation.
 - [ ] Either an implementation follow-up task is filed, or the spike
       explicitly closes with "robocopy-only stays" and updates ADR-0008's
